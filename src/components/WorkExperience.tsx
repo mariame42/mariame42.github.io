@@ -5,6 +5,19 @@ import SectionTitle from './SectionTitle';
 const WorkExperience = () => {
   const experiences = [
     {
+      position: 'Co-founder & CEO',
+      company: 'RMC Labs',
+      location: 'Abu Dhabi, UAE',
+      period: 'MAY 2025 - Present',
+      description: 'Co-founded RMC Labs, a robotics startup building tailor-made robots for campuses and events. I lead the product roadmap, manage cross-functional teams, and oversee the development of our first robot, Roamio, an autonomous campus guide.',
+      achievements: [
+        'createing the first mvp of the robot',
+        'be part of the five startups that represent 42 north star Dubai 2025',
+        'Participated in the Dubai Startup Competition 2025 and won from the best innovative startups'
+      ],
+      logo: 'asset/images/RMC_logo.png'
+    },
+    {
       position: 'Discovery Piscine',
       company: '42 Abu Dhabi',
       location: 'Abu Dhabi, UAE',

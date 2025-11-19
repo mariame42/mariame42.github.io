@@ -8,7 +8,6 @@ import {
   BookOpen, 
   Github, 
   Linkedin, 
-  Twitter, 
   Mail,
   Menu,
   X,
@@ -86,11 +85,8 @@ function App() {
               <a href="https://github.com/mariame42" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 transition-colors">
                 <Github size={20} />
               </a>
-              <a href="https://www.linkedin.com/in/mariam-haitham-92a941331" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 transition-colors">
+              <a href="https://www.linkedin.com/in/mariam-haitham-eid-92a941331" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 transition-colors">
                 <Linkedin size={20} />
-              </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 transition-colors">
-                <Twitter size={20} />
               </a>
               <a href="mailto:meid@student.42abudhabi.ae" className="text-gray-600 hover:text-blue-600 transition-colors">
                 <Mail size={20} />
@@ -141,11 +137,8 @@ function App() {
                   <a href="https://github.com/mariame42" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600">
                     <Github size={24} />
                   </a>
-                  <a href="https://www.linkedin.com/in/mariam-haitham-92a941331" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600">
+                  <a href="https://www.linkedin.com/in/mariam-haitham-eid-92a941331" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600">
                     <Linkedin size={24} />
-                  </a>
-                  <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600">
-                    <Twitter size={24} />
                   </a>
                   <a href="mailto:student@42abudhabi.ae" className="text-gray-600 hover:text-blue-600">
                     <Mail size={24} />

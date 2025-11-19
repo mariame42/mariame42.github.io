@@ -42,30 +42,36 @@ const AboutMe = () => {
             <div>
               <h3 className="text-xl font-semibold text-gray-800 mb-3">About me</h3>
               <p className="text-gray-600 leading-relaxed">
-                I’m Mariam, a dedicated software development student at 42 Abu Dhabi.  With a strong foundation in C programming.
+                I’m Mariam, a dedicated software development student at 42 Abu Dhabi.  With a strong foundation in C, Cpp, Python and Ros2.
               </p>
               <p className="text-gray-600 leading-relaxed mt-3">
-                At 42 Abu Dhabi, I developed the skill of learning, which has guided me through various competitions throughout my journey.
+                At 42 Abu Dhabi, I developed the most important skill of all — the ability to learn. This mindset guided me through multiple competitions and shaped my growth throughout my journey
               </p>
             </div>
             
             <div>
               <h3 className="text-xl font-semibold text-gray-800 mb-3">My Journey</h3>
               <p className="text-gray-600 leading-relaxed">
-                My journey into programming began as a student at 42 Abu Dhabi. Eight months ago, I began my coding journey with no prior experience, and through hands-on projects, hackathons, and peer learning, I have developed strong problem-solving skills and a deep understanding of programming. 
+              My programming journey began at 42 Abu Dhabi. In June 2024, I started with no prior experience. Through hands-on projects, hackathons, and peer learning, I gained strong problem-solving skills and a deeper understanding of programming.
               </p>
               <p className="text-gray-600 leading-relaxed mt-3">
-                Through rigorous projects and collaborative challenges, I've developed not only technical skills but also critical soft skills such as time management, communication, and resilience in the face of complex problems.
+              Later, I co-founded RMC Labs, a robotics startup that builds customized robots. Through RMC, I learned a great deal about teamwork, robotics, leadership, and managing real-world technical challenges. I currently serve as the CEO and the project manager of our first robot, Roamio, a campus guide robot.
+              </p>
+              <p className="text-gray-600 leading-relaxed mt-3">
+              Alongside robotics, I also began learning web development. As part of this path, I built a small website while focusing on learning Django.
+              </p>
+              <p className="text-gray-600 leading-relaxed mt-3">
+              Through rigorous projects and collaborative challenges, I have developed not only technical skills but also important soft skills such as time management, communication, and resilience.
               </p>
             </div>
             
             <div>
               <h3 className="text-xl font-semibold text-gray-800 mb-3">My Goals</h3>
               <p className="text-gray-600 leading-relaxed">
-                I aim to leverage my education at 42 Abu Dhabi to contribute meaningfully to the tech industry, particularly in areas of software innovation that address real-world challenges. I'm especially interested in exploring the intersection of technology and sustainability.
+                I aim to leverage my education at 42 Abu Dhabi and my experience at RMC Labs to contribute meaningfully to the tech industry, especially in areas where software and hardware innovation can solve real-world problems. I am particularly interested in the intersection of technology and sustainability.
               </p>
               <p className="text-gray-600 leading-relaxed mt-3">
-                My immediate goal is to secure an internship that allows me to apply my skills in a professional setting while continuing to grow as a developer and problem-solver.
+              My immediate goal is to secure an internship where I can apply my skills in a professional environment while continuing to grow as a developer, engineer, and problem-solver.
               </p>
             </div>
           </div>
