@@ -15,14 +15,25 @@ This is my **E-Portfolio** that represents my journey with **42 Abu Dhabi**, hig
 - Links to GitHub, LinkedIn, etc.
 
 ## Running the Project
-To run the project locally, follow these steps:
+The easiest way to get going is with `nvm`, which keeps Node.js/npm in an isolated environment (similar to using a Python virtual environment).
 
-1. Open the terminal.
-2. Navigate to the project directory.
-3. Run the following command:
+1. Open a terminal and clone or download this repo, then `cd` into it.
+2. Install and load `nvm` (skip if already installed):
    ```sh
-   install npm
+   curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+   export NVM_DIR="$HOME/.nvm"
+   [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+   ```
+3. Create/use the LTS Node environment:
+   ```sh
+   nvm install --lts
+   nvm use --lts
+   ```
+4. Install dependencies and start the dev server:
+   ```sh
+   npm install
    npm run dev
    ```
-4. Copy the local development server link (e.g., `http://localhost:5174/`).
-5. Open the link in your browser and enjoy!
+5. Copy the local dev URL shown in the terminal (e.g., `http://localhost:5175/mariame42.github.io/`) and open it in your browser.
+
+> Prefer to work inside a Python-style virtual environment? Feel free to create one (`python3 -m venv .venv && source .venv/bin/activate`) before running the commands above; the steps stay the same inside that shell.
