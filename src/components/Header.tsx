@@ -9,7 +9,7 @@ const Header = () => {
           <div className="flex items-center">
             <Code42 className="h-8 w-8 text-blue-600" />
             <h1 className="ml-3 text-xl font-bold text-gray-900">
-              <span className="text-blue-600">42</span> Abu Dhabi Portfolio
+              Mariam Haitham Eid
             </h1>
           </div>
           <div className="hidden md:flex items-center space-x-4">

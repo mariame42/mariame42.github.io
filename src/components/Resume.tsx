@@ -63,6 +63,32 @@ const Resume = () => {
                 <h3 className="text-lg font-semibold text-gray-800 border-b border-gray-200 pb-1 mb-2">Experience</h3>
                 <div className="mb-3">
                   <div className="flex justify-between">
+                    <p className="font-medium">Co-founder & CEO</p>
+                    <p className="text-sm text-gray-600">May 2025 - Present</p>
+                  </div>
+                  <p className="text-sm font-medium">RMC Labs</p>
+                  <ul className="text-xs list-disc list-inside mt-1 text-gray-600">
+                    <li>Co-founded RMC Labs, a robotics startup building tailor-made robots for campuses and events.</li>
+                    <li>Lead the product roadmap, manage cross-functional teams, and oversee the development of our first robot, Roamio, an autonomous campus guide.</li>
+                    <li>createing the first mvp of the robot</li>
+                    <li>be part of the five startups that represent 42 north star Dubai 2025</li>
+                    <li>Participated in the Dubai Startup Competition 2025 and won from the best innovative startups</li>
+                  </ul>
+                </div>
+                <div>
+                  <div className="flex justify-between">
+                    <p className="font-medium">Intern</p>
+                    <p className="text-sm text-gray-600">May 2025 - August 2025</p>
+                  </div>
+                  <p className="text-sm font-medium">RWT startup</p>
+                  <ul className="text-xs list-disc list-inside mt-1 text-gray-600">
+                    <li>worked with the startup RWT to developing some feachers for there existing website</li>
+                    <li>create my first website from scratch, that can summrize text or file</li>
+                    <li>worked in the tester of there website</li>
+                  </ul>
+                </div>
+                <div>
+                  <div className="flex justify-between">
                     <p className="font-medium">Discovery Piscine</p>
                     <p className="text-sm text-gray-600">Jun 2024 - Aug 2024</p>
                   </div>
@@ -92,7 +118,11 @@ const Resume = () => {
                 <div className="grid grid-cols-2 gap-2 text-sm">
                   <div>
                     <p className="font-medium">Programming Languages:</p>
-                    <p className="text-xs text-gray-600">C, Python</p>
+                    <p className="text-xs text-gray-600">C, Python, Cpp</p>
+                  </div>
+                  <div>
+                    <p className="font-medium">Robotics:</p>
+                    <p className="text-xs text-gray-600">ROS2, Electronics, 3D Printing, Hardware</p>
                   </div>
                   <div>
                     <p className="font-medium">game Development:</p>

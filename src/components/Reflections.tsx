@@ -8,9 +8,7 @@ const Reflections = () => {
       title: 'My Journey at 42 Abu Dhabi',
       date: 'August 2023',
       content: `
-        <p>Over the past eight months, my journey in coding has been both challenging and rewarding. Starting from zero, I have immersed myself in various projects and hackathons, each contributing to my growth as a developer.</p>
-        
-        <p>One of the most valuable aspects of this journey has been collaboration. Working on Minishell, my first team project, exposed me to different coding approaches, improving my adaptability and problem-solving skills.</p>
+        <p>Over the past year, my journey in coding has been both challenging and rewarding. Starting from zero, I have immersed myself in various projects and hackathons, each contributing to my growth as a developer.</p>
         
         <p>Similarly, in Para_Legal_News, I worked with my team to develop a website with an AI agent, an idea that originated during the SambaNova Hackathon and has since evolved into an ongoing project. </p>
         
@@ -18,10 +16,21 @@ const Reflections = () => {
       `
     },
     {
+      title: 'Reflections on Team leading',
+      date: 'May 2024',
+      content: `
+        <p>Working as a team leader in a robotics project was a challenge but also a great learning experience. I learned to be more organized and to delegate tasks to the team members. I also learned to be more patient and to listen to the team members.</p>
+        
+        <p>So in big events like the north star Dubai, We were able as a team to represent 42 and win the best innovative startups award.</p>
+      `
+    },
+    {
       title: 'Reflections on Team Collaboration',
       date: 'May 2023',
       content: `
         <p>Working in a team for the first time during the Minishell project was a valuable learning experience. Initially, our coding styles were quite different, but over the course of two months, we worked hard to find common ground. This collaboration taught me the importance of adaptability and communication in a team setting.</p>
+
+        <p>also working with a different team in cube 3d project, my collegue had a different coding style, so i learned with him to work with SOLID principle</p>
         
         <p>Later, during hackathons, especially when working with people I didn't know, I learned to quickly plan and focus on the core elements of the challenge. I realized that having a small, functional project was far better than having nothing at all. Sometimes, the key is not to aim for perfection but to prioritize the most important aspects and work within the time constraints. This experience taught me to think faster and continuously improve the project as time allowed, rather than becoming stuck on a big, unattainable goal.</p>
       `

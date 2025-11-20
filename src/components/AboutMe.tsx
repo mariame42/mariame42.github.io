@@ -16,7 +16,7 @@ const AboutMe = () => {
               className="w-full h-64 object-cover object-center"
             />
             <div className="p-6 space-y-4">
-              <h2 className="text-2xl font-bold text-gray-800">Mariam Eid</h2>
+              <h2 className="text-2xl font-bold text-gray-800">Mariam Haitham Eid</h2>
               <p className="text-blue-600 font-medium">Software Engineering Student</p>
               
               <div className="space-y-3 text-gray-600">

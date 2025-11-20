@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="flex items-center mb-4 md:mb-0">
             <Code42 className="h-6 w-6 text-blue-600" />
             <span className="ml-2 text-gray-800 font-medium">
-              <span className="text-blue-600">42</span> Abu Dhabi Portfolio
+              Mariam Haitham Eid
             </span>
           </div>
           
