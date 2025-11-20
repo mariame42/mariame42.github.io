@@ -15,7 +15,19 @@ const WorkExperience = () => {
         'be part of the five startups that represent 42 north star Dubai 2025',
         'Participated in the Dubai Startup Competition 2025 and won from the best innovative startups'
       ],
-      logo: 'asset/images/RMC_logo.png'
+      logo: `${import.meta.env.BASE_URL}asset/images/RMC_logo.png`
+    },
+    {
+      position: 'Intern',
+      company: 'RWT startup',
+      location: 'Abu Dhabi, UAE',
+      period: 'MAY 2025 - August 2025',
+      description: 'worked with the startup RWT to developing some feachers for there existing website',
+      achievements: [
+        'create my first website from scratch, that can summrize text or file',
+        'worked in the tester of there website',
+      ],
+      logo: `${import.meta.env.BASE_URL}asset/images/RWT_logo02.png`
     },
     {
       position: 'Discovery Piscine',
@@ -28,7 +40,7 @@ const WorkExperience = () => {
         'Developed Teaching and Mentoring Skills',
         'Reinforced Technical Knowledge while Sharing the Joy of Coding'
       ],
-      logo: 'asset/images/Discovery_Piscine.jpeg'
+      logo: `${import.meta.env.BASE_URL}asset/images/Discovery_Piscine.jpeg`
     },
     {
       position: 'Mentor School Hackathon',
@@ -41,7 +53,7 @@ const WorkExperience = () => {
         'Utilized AI Expertise to Guide and Teach the Team',
         'Led the Team to Victory with Strategic Time Management'
       ],
-      logo: 'asset/images/Pisa.jpeg'
+      logo: `${import.meta.env.BASE_URL}asset/images/Pisa.jpeg`
     },
     {
       position: 'Bill labs Secretary',
@@ -54,7 +66,7 @@ const WorkExperience = () => {
         'Organized and Hosted Coding Competitions',
         'Fostered a Competitive and Inspiring Environment'
       ],
-      logo: 'asset/images/Bell_labs.jpeg'
+      logo: `${import.meta.env.BASE_URL}asset/images/Bell_labs.jpeg`
       
     }
   ];

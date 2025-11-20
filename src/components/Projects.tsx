@@ -5,6 +5,33 @@ import SectionTitle from './SectionTitle';
 const Projects = () => {
   const projects = [
     {
+      title: 'Roamio',
+      description: 'Roamiois a robot I am developing with the startup RMC Labs. It is designed to guide people at 42 and answer there questions powered by AI. I worked in the hardware part and now i focusing in the chatbot.',
+      technologies: ['Ros 2', 'Linix', 'Ai'],
+      image: `${import.meta.env.BASE_URL}asset/images/roamio.jpeg`,
+      github: null,
+      demo: 'https://drive.google.com/file/d/1KHMLbSQVb_f5TJUjYPzLXIbUjAefOdq9/view?usp=sharing',
+      date: 'May 2025 - Present'
+    },
+    {
+      title: 'cub3d',
+      description: 'me and my collegue we create this game with c lanugage using the raycasting prenceble to mimch how old games were rendered',
+      technologies: ['C', 'Raycasting', 'Teamwork'],
+      image: `${import.meta.env.BASE_URL}asset/images/cube3d_screenshot.png`,
+      github: 'https://github.com/mariame42/cub3d',
+      demo: 'https://drive.google.com/file/d/1e331Rg4jDpDuAeIuFCsnaTx6JyAqVwui/view?usp=sharing',
+      date: 'August 2025'
+    },
+    {
+      title: 'ai summarizer website',
+      description: 'my first website that i build from scratch, it can summrize text or file',
+      technologies: ['api calls', 'Django', 'Typescript'],
+      image: `${import.meta.env.BASE_URL}asset/images/sum_web.jpg`,
+      github: 'https://github.com/mariame42/last_ai_sum',
+      demo: 'https://drive.google.com/file/d/1uJ0lEqVA9BTl1Etr-6bTBYMqmIOgl9rg/view?usp=sharing',
+      date: 'August 2025'
+    },
+    {
       title: 'para_legal_news',
       description: 'Me and my team we started this website, which features an AI agent, during the SambaNova hackathon, and we have been continuously developing it to become a fully functional website.',
       technologies: ['Ai', 'Data Base', 'Algorithms', 'Teamwork'],
@@ -26,28 +53,10 @@ const Projects = () => {
       title: 'Personal Portfolio',
       description: 'A responsive portfolio website for Learning to learn modile',
       technologies: ['TypeScript', 'Ai'],
-      image: 'asset/images/e-portfolio.jpg',
+      image: `${import.meta.env.BASE_URL}asset/images/e-portfolio.jpg`,
       github: 'https://github.com/mariame42/mariame42.github.io',
       demo: null,
       date: 'May 2025'
-    },
-    {
-      title: 'The Guider',
-      description: 'The Guider is a robot I am developing with the robotics team. It is designed to guide people at 42 and will be powered by AI.',
-      technologies: ['Ros 3', 'Linix'],
-      image: 'asset/images/robot.jpg',
-      github: null,
-      demo: null,
-      date: '2025'
-    },
-    {
-      title: 'Secret Hackathons',
-      description: 'Secret Hackathons is one of the projects I am working on. It is intended to be a series of hackathons at 42, each featuring a known subject for the participants in advance.',
-      technologies: ['Problem-Solving', 'Teamwork'],
-      image: 'asset/images/hackathon.jpg',
-      github: null,
-      demo: null,
-      date: '2025'
     },
   ];
 
@@ -90,15 +99,17 @@ const Projects = () => {
             </div>
             
             <div className="px-5 py-3 border-t border-gray-200 flex justify-between">
-              <a 
-                href={project.github} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-gray-700 hover:text-blue-600 flex items-center text-sm font-medium"
-              >
-                <Github size={16} className="mr-1" />
-                GitHub
-              </a>
+              {project.github && (
+                <a 
+                  href={project.github} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-gray-700 hover:text-blue-600 flex items-center text-sm font-medium"
+                >
+                  <Github size={16} className="mr-1" />
+                  GitHub
+                </a>
+              )}
               
               {project.demo && (
                 <a 

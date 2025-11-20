@@ -9,15 +9,18 @@ const Skills = () => {
       icon: <Code className="text-blue-600" size={24} />,
       skills: [
         { name: 'C', level: 80 },
-        { name: 'Python', level: 50 },
+        { name: 'Python', level: 60 },
+        { name: 'C++', level: 40 },
       ]
     },
     {
-      title: 'game Development',
+      title: 'Robotics',
       icon: <Globe className="text-blue-600" size={24} />,
       skills: [
-        { name: 'unity', level: 30 },
-        { name: 'blender', level: 50 },
+        { name: 'ROS2', level: 80 },
+        { name: 'Electronics', level: 50},
+        { name: '3D Printing', level: 80},
+        { name: 'Hardware', level: 70},
       ]
     },
     {
@@ -34,27 +37,35 @@ const Skills = () => {
       icon: <Database className="text-blue-600" size={24} />,
       skills: [
         { name: 'Ai tools', level: 80 },
-        { name: 'agentic ai', level: 40 },
+        { name: 'API Usage', level: 70 },
+        { name: 'Agentic ai', level: 30 },
       ]
     },
     {
-      title: 'Computer Science',
+      title: 'Web Development',
       icon: <Cpu className="text-blue-600" size={24} />,
       skills: [
-        { name: 'Data Structures', level: 60 },
-        { name: 'Algorithms', level: 40 },
-        { name: 'Operating Systems', level: 50 },
+        { name: 'Backend with Django', level: 60 },
+        { name: 'Frontend with typescript', level: 20 },
       ]
     },
     {
       title: 'Soft Skills',
       icon: <Layers className="text-blue-600" size={24} />,
       skills: [
+        { name: 'Time Management', level: 90 },
         { name: 'Problem Solving', level: 90 },
         { name: 'Team Collaboration', level: 85 },
         { name: 'Communication', level: 80 },
-        { name: 'Time Management', level: 75 },
         { name: 'Adaptability', level: 85 },
+      ]
+    },
+    {
+      title: 'game Development',
+      icon: <Globe className="text-blue-600" size={24} />,
+      skills: [
+        { name: 'Unity', level: 20 },
+        { name: 'Blender', level: 50 },
       ]
     }
   ];
