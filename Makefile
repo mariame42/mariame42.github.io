@@ -1,13 +1,18 @@
 NPM ?= npm
 
-.PHONY: build run clean
+.PHONY: install build run deploy clean
+
+install:
+	$(NPM) install
 
 build:
-	$(NPM) install
+	$(NPM) run build
 
 run:
 	$(NPM) run dev
 
-clean:
-	rm -rf node_modules
+deploy:
+	$(NPM) run deploy
 
+clean:
+	rm -rf node_modules dist
