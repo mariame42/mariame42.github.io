@@ -5,6 +5,33 @@ import SectionTitle from './SectionTitle';
 const Projects = () => {
   const projects = [
     {
+      title: 'ft_transcendence (42 School) – In Progress',
+      description: "Developing Kido Path, a kids' productivity platform inspired by a real parenting challenge. The application empowers children to manage their own tasks while allowing parental supervision, using a scalable microservices architecture.",
+      technologies: ['Microservices', 'Docker', 'Django', 'TypeScript', 'Teamwork'],
+      image: `${import.meta.env.BASE_URL}asset/images/kiddoPath.png`,
+      github: 'https://github.com/nasqnik/Transcendence',
+      demo: null,
+      date: 'In Progress'
+    },
+    {
+      title: 'ft_irc (42 School)',
+      description: 'Collaborated with a team to develop an IRC server in C++, using SOLID principles to design a reusable, modular, and maintainable architecture.',
+      technologies: ['C++', 'Networking', 'SOLID', 'Teamwork'],
+      image: `${import.meta.env.BASE_URL}asset/images/irc.jpeg`,
+      github: 'https://github.com/mariame42/IRC',
+      demo: null,
+      date: '2025'
+    },
+    {
+      title: 'Inception (42 School)',
+      description: 'Built a multi-container application using Docker and Docker Compose, developing practical skills in containerization and service orchestration.',
+      technologies: ['Docker', 'Docker Compose', 'NGINX', 'WordPress', 'MariaDB'],
+      image: `${import.meta.env.BASE_URL}asset/images/inception.jpg`,
+      github: 'https://github.com/mariame42/Inception',
+      demo: null,
+      date: '2025'
+    },
+    {
       title: 'Roamio',
       description: 'Roamiois a robot I am developing with the startup RMC Labs. It is designed to guide people at 42 and answer there questions powered by AI. I worked in the hardware part and now i focusing in the chatbot.',
       technologies: ['Ros 2', 'Linix', 'Ai'],

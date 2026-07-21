@@ -1,3 +1,129 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Continuous A4-width resume (height grows with content; PDF splits pages) */
+.resume-a4-sheet {
+  width: 210mm;
+  max-width: 100%;
+  box-sizing: border-box;
+  background: #fff;
+  padding: 16mm 14mm;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+  color: #1f2937;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.resume-name {
+  font-size: 26px;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.2;
+}
+
+.resume-subtitle {
+  font-size: 15px;
+  color: #4b5563;
+  margin-top: 4px;
+}
+
+.resume-contact {
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 6px;
+}
+
+.resume-block {
+  margin-bottom: 16px;
+}
+
+.resume-section-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #111827;
+  border-bottom: 1px solid #d1d5db;
+  padding-bottom: 4px;
+  margin-bottom: 10px;
+}
+
+.resume-entry {
+  margin-bottom: 12px;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.resume-entry-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: baseline;
+}
+
+.resume-role {
+  font-size: 13px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.resume-date {
+  font-size: 12px;
+  color: #6b7280;
+  white-space: nowrap;
+}
+
+.resume-org {
+  font-size: 12px;
+  font-weight: 500;
+  color: #374151;
+  margin-top: 2px;
+}
+
+.resume-bullets {
+  margin-top: 4px;
+  padding-left: 1.1rem;
+  list-style: disc;
+  color: #4b5563;
+  font-size: 12px;
+}
+
+.resume-bullets li {
+  margin-bottom: 2px;
+}
+
+.resume-skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 16px;
+}
+
+.resume-skill-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.resume-skill-value {
+  font-size: 12px;
+  color: #4b5563;
+}
+
+@media (max-width: 900px) {
+  .resume-a4-sheet {
+    width: 100%;
+    padding: 1.25rem;
+  }
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 12mm;
+  }
+
+  .resume-a4-sheet {
+    width: 100%;
+    box-shadow: none;
+    padding: 0;
+  }
+}

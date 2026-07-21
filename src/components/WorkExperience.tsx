@@ -1,9 +1,39 @@
 import React from 'react';
-import { Briefcase, Calendar, MapPin } from 'lucide-react';
+import { Briefcase, Calendar, MapPin, ExternalLink, FileText } from 'lucide-react';
 import SectionTitle from './SectionTitle';
 
 const WorkExperience = () => {
   const experiences = [
+    {
+      position: 'Intern',
+      company: 'Exelixi AI',
+      location: 'Dubai, UAE',
+      period: '2 months',
+      description: 'Developed a software system that communicates with hardware components. Independently handled a full project from development to delivery under real-world constraints.',
+      achievements: [
+        'Developed software system communicating with hardware components',
+        'Independently handled a full project from development to delivery',
+        'Delivered the project on time under real-world constraints'
+      ],
+      logo: `${import.meta.env.BASE_URL}asset/images/exelixi_logo.jpeg`,
+      website: null,
+      intro: null
+    },
+    {
+      position: 'Club Organizer',
+      company: 'AI & ML Club, 42 Abu Dhabi',
+      location: 'Abu Dhabi, UAE',
+      period: '2026 - Present',
+      description: 'Help keep the AI & ML Club running smoothly at 42 Abu Dhabi. I support event design and setup, work to keep members active and engaged, and have started contributing to the club website.',
+      achievements: [
+        'Helped design and set up club events on AI and ML topics',
+        'Worked to keep members active and involved in peer learning',
+        'Started contributing to the club website'
+      ],
+      logo: `${import.meta.env.BASE_URL}asset/images/AI&ML.png`,
+      website: 'https://ai-ml-club-event-registration.vercel.app/',
+      intro: 'https://drive.google.com/file/d/1n0je9k880Kidi6WlDTXzDWU2MdVDY1cW/view?usp=sharing'
+    },
     {
       position: 'Co-founder & CEO',
       company: 'RMC Labs',
@@ -15,7 +45,9 @@ const WorkExperience = () => {
         'be part of the five startups that represent 42 north star Dubai 2025',
         'Participated in the Dubai Startup Competition 2025 and won from the best innovative startups'
       ],
-      logo: `${import.meta.env.BASE_URL}asset/images/RMC_logo.png`
+      logo: `${import.meta.env.BASE_URL}asset/images/RMC_logo.png`,
+      website: null,
+      intro: null
     },
     {
       position: 'Intern',
@@ -27,7 +59,9 @@ const WorkExperience = () => {
         'create my first website from scratch, that can summrize text or file',
         'worked in the tester of there website',
       ],
-      logo: `${import.meta.env.BASE_URL}asset/images/RWT_logo02.png`
+      logo: `${import.meta.env.BASE_URL}asset/images/RWT_logo02.png`,
+      website: null,
+      intro: null
     },
     {
       position: 'Discovery Piscine',
@@ -40,7 +74,9 @@ const WorkExperience = () => {
         'Developed Teaching and Mentoring Skills',
         'Reinforced Technical Knowledge while Sharing the Joy of Coding'
       ],
-      logo: `${import.meta.env.BASE_URL}asset/images/Discovery_Piscine.jpeg`
+      logo: `${import.meta.env.BASE_URL}asset/images/Discovery_Piscine.jpeg`,
+      website: null,
+      intro: null
     },
     {
       position: 'Mentor School Hackathon',
@@ -53,7 +89,9 @@ const WorkExperience = () => {
         'Utilized AI Expertise to Guide and Teach the Team',
         'Led the Team to Victory with Strategic Time Management'
       ],
-      logo: `${import.meta.env.BASE_URL}asset/images/Pisa.jpeg`
+      logo: `${import.meta.env.BASE_URL}asset/images/Pisa.jpeg`,
+      website: null,
+      intro: null
     },
     {
       position: 'Bill labs Secretary',
@@ -66,8 +104,9 @@ const WorkExperience = () => {
         'Organized and Hosted Coding Competitions',
         'Fostered a Competitive and Inspiring Environment'
       ],
-      logo: `${import.meta.env.BASE_URL}asset/images/Bell_labs.jpeg`
-      
+      logo: `${import.meta.env.BASE_URL}asset/images/Bell_labs.jpeg`,
+      website: null,
+      intro: null
     }
   ];
 
@@ -114,6 +153,33 @@ const WorkExperience = () => {
                     ))}
                   </ul>
                 </div>
+
+                {(exp.website || exp.intro) && (
+                  <div className="mt-4 flex flex-wrap gap-4">
+                    {exp.website && (
+                      <a
+                        href={exp.website}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-600 hover:text-blue-800 flex items-center text-sm font-medium"
+                      >
+                        <ExternalLink size={16} className="mr-1" />
+                        Club Website
+                      </a>
+                    )}
+                    {exp.intro && (
+                      <a
+                        href={exp.intro}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-600 hover:text-blue-800 flex items-center text-sm font-medium"
+                      >
+                        <FileText size={16} className="mr-1" />
+                        Introduction PPT
+                      </a>
+                    )}
+                  </div>
+                )}
               </div>
             </div>
           </div>

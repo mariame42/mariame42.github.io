@@ -8,7 +8,7 @@ const Qualifications = () => {
       institution: '42 Abu Dhabi',
       degree: 'Software Engineering Program',
       period: '2023 - Present',
-      description: 'Intensive project-based curriculum focused on programming, algorithms, and software development. Completed core projects including ft_printf, minitalk, and minishell.',
+      description: 'Intensive project-based curriculum focused on programming, algorithms, and software development. Completed projects including minishell, cub3d, ft_irc, Inception, and ft_transcendence (KiddoPath, in progress).',
       logo: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80'
     },
     {

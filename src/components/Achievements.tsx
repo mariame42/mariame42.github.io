@@ -5,6 +5,13 @@ import SectionTitle from './SectionTitle';
 const Achievements = () => {
   const achievements = [
     {
+      title: 'KUEC Hackathon',
+      organization: 'KUEC',
+      date: 'Nov 2025',
+      description: 'Contributed to a robotics project under time constraints. Awarded an internship based on individual performance.',
+      icon: <Award className="text-blue-500" size={24} />
+    },
+    {
       title: 'Competition Winner',
       organization: 'North Star Dubai 2025',
       date: 'Oct 2025',
@@ -87,12 +94,12 @@ const Achievements = () => {
         </div>
         
         <div className="bg-white rounded-lg shadow-md p-6 text-center">
-          <div className="text-4xl font-bold text-blue-600 mb-2">3</div>
+          <div className="text-4xl font-bold text-blue-600 mb-2">4</div>
           <p className="text-gray-700">Awards Received</p>
         </div>
         
         <div className="bg-white rounded-lg shadow-md p-6 text-center">
-          <div className="text-4xl font-bold text-blue-600 mb-2">20</div>
+          <div className="text-4xl font-bold text-blue-600 mb-2">25</div>
           <p className="text-gray-700">months of Learning</p>
         </div>
       </div>
