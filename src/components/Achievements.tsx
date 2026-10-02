@@ -5,6 +5,13 @@ import SectionTitle from './SectionTitle';
 const Achievements = () => {
   const achievements = [
     {
+      title: '1st Place, JetBrains Hackathon',
+      organization: 'JetBrains at 42 Abu Dhabi',
+      date: 'Oct 2026',
+      description: 'Won 1st place with Ivan Pyhtin. We built Lattice, an IntelliJ IDEA plugin that helps developers see how files, changes, teammates, and AI agents connect.',
+      icon: <Trophy className="text-yellow-500" size={24} />
+    },
+    {
       title: 'KUEC Hackathon',
       organization: 'KUEC',
       date: 'Nov 2025',
@@ -94,7 +101,7 @@ const Achievements = () => {
         </div>
         
         <div className="bg-white rounded-lg shadow-md p-6 text-center">
-          <div className="text-4xl font-bold text-blue-600 mb-2">4</div>
+          <div className="text-4xl font-bold text-blue-600 mb-2">5</div>
           <p className="text-gray-700">Awards Received</p>
         </div>
         

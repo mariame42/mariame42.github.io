@@ -1,91 +1,19 @@
-import React from 'react';
-import { Code, ExternalLink, Github, Calendar } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
+import { Code, ExternalLink, Github, Calendar, X } from 'lucide-react';
 import SectionTitle from './SectionTitle';
+import { projects } from '../data/profile';
 
 const Projects = () => {
-  const projects = [
-    {
-      title: 'ft_transcendence (42 School) – In Progress',
-      description: "Developing Kido Path, a kids' productivity platform inspired by a real parenting challenge. The application empowers children to manage their own tasks while allowing parental supervision, using a scalable microservices architecture.",
-      technologies: ['Microservices', 'Docker', 'Django', 'TypeScript', 'Teamwork'],
-      image: `${import.meta.env.BASE_URL}asset/images/kiddoPath.png`,
-      github: 'https://github.com/nasqnik/Transcendence',
-      demo: null,
-      date: 'In Progress'
-    },
-    {
-      title: 'ft_irc (42 School)',
-      description: 'Collaborated with a team to develop an IRC server in C++, using SOLID principles to design a reusable, modular, and maintainable architecture.',
-      technologies: ['C++', 'Networking', 'SOLID', 'Teamwork'],
-      image: `${import.meta.env.BASE_URL}asset/images/irc.jpeg`,
-      github: 'https://github.com/mariame42/IRC',
-      demo: null,
-      date: '2025'
-    },
-    {
-      title: 'Inception (42 School)',
-      description: 'Built a multi-container application using Docker and Docker Compose, developing practical skills in containerization and service orchestration.',
-      technologies: ['Docker', 'Docker Compose', 'NGINX', 'WordPress', 'MariaDB'],
-      image: `${import.meta.env.BASE_URL}asset/images/inception.jpg`,
-      github: 'https://github.com/mariame42/Inception',
-      demo: null,
-      date: '2025'
-    },
-    {
-      title: 'Roamio',
-      description: 'Roamiois a robot I am developing with the startup RMC Labs. It is designed to guide people at 42 and answer there questions powered by AI. I worked in the hardware part and now i focusing in the chatbot.',
-      technologies: ['Ros 2', 'Linix', 'Ai'],
-      image: `${import.meta.env.BASE_URL}asset/images/roamio.jpeg`,
-      github: null,
-      demo: 'https://drive.google.com/file/d/1KHMLbSQVb_f5TJUjYPzLXIbUjAefOdq9/view?usp=sharing',
-      date: 'May 2025 - Present'
-    },
-    {
-      title: 'cub3d',
-      description: 'me and my collegue we create this game with c lanugage using the raycasting prenceble to mimch how old games were rendered',
-      technologies: ['C', 'Raycasting', 'Teamwork'],
-      image: `${import.meta.env.BASE_URL}asset/images/cube3d_screenshot.png`,
-      github: 'https://github.com/mariame42/cub3d',
-      demo: 'https://drive.google.com/file/d/1e331Rg4jDpDuAeIuFCsnaTx6JyAqVwui/view?usp=sharing',
-      date: 'August 2025'
-    },
-    {
-      title: 'ai summarizer website',
-      description: 'my first website that i build from scratch, it can summrize text or file',
-      technologies: ['api calls', 'Django', 'Typescript'],
-      image: `${import.meta.env.BASE_URL}asset/images/sum_web.jpg`,
-      github: 'https://github.com/mariame42/last_ai_sum',
-      demo: 'https://drive.google.com/file/d/1uJ0lEqVA9BTl1Etr-6bTBYMqmIOgl9rg/view?usp=sharing',
-      date: 'August 2025'
-    },
-    {
-      title: 'para_legal_news',
-      description: 'Me and my team we started this website, which features an AI agent, during the SambaNova hackathon, and we have been continuously developing it to become a fully functional website.',
-      technologies: ['Ai', 'Data Base', 'Algorithms', 'Teamwork'],
-      image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80',
-      github: 'https://github.com/madihanazar/para_legal_news',
-      demo: null,
-      date: 'Nov 2024'
-    },
-    {
-      title: 'minishell',
-      description: 'A simplified shell implementation in C, featuring command execution, pipes, redirections, and environment variable management.',
-      technologies: ['C', 'Unix', 'Process Management'],
-      image: 'https://images.unsplash.com/photo-1629654297299-c8506221ca97?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80',
-      github: 'https://github.com/nasqnik/minishell',
-      demo: null,
-      date: 'Feb 2025'
-    },
-    {
-      title: 'Personal Portfolio',
-      description: 'A responsive portfolio website for Learning to learn modile',
-      technologies: ['TypeScript', 'Ai'],
-      image: `${import.meta.env.BASE_URL}asset/images/e-portfolio.jpg`,
-      github: 'https://github.com/mariame42/mariame42.github.io',
-      demo: null,
-      date: 'May 2025'
-    },
-  ];
+  const [openImage, setOpenImage] = useState<{ src: string; title: string } | null>(null);
+
+  useEffect(() => {
+    if (!openImage) return;
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setOpenImage(null);
+    };
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
+  }, [openImage]);
 
   return (
     <div className="space-y-8">
@@ -94,13 +22,18 @@ const Projects = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((project, index) => (
           <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-full">
-            <div className="h-48 overflow-hidden">
+            <button
+              type="button"
+              onClick={() => setOpenImage({ src: project.image, title: project.title })}
+              className="block w-full h-48 overflow-hidden cursor-zoom-in bg-transparent border-0 p-0"
+              aria-label={`View ${project.title} image`}
+            >
               <img 
                 src={project.image} 
                 alt={project.title} 
                 className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
               />
-            </div>
+            </button>
             
             <div className="p-5 flex-grow">
               <div className="flex justify-between items-start">
@@ -125,6 +58,7 @@ const Projects = () => {
               </div>
             </div>
             
+            {(project.github || project.demo) && (
             <div className="px-5 py-3 border-t border-gray-200 flex justify-between">
               {project.github && (
                 <a 
@@ -150,9 +84,32 @@ const Projects = () => {
                 </a>
               )}
             </div>
+            )}
           </div>
         ))}
       </div>
+
+      {openImage && (
+        <div
+          className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4"
+          onClick={() => setOpenImage(null)}
+        >
+          <button
+            type="button"
+            onClick={() => setOpenImage(null)}
+            className="absolute top-4 right-4 text-white"
+            aria-label="Close image"
+          >
+            <X size={28} />
+          </button>
+          <img
+            src={openImage.src}
+            alt={openImage.title}
+            className="max-w-full max-h-[90vh] object-contain"
+            onClick={(event) => event.stopPropagation()}
+          />
+        </div>
+      )}
     </div>
   );
 };

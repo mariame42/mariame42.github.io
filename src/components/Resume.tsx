@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react';
 import { FileText, Download, ExternalLink } from 'lucide-react';
 import SectionTitle from './SectionTitle';
 import html2pdf from 'html2pdf.js';
+import { profile, education, experiences, skillCategories, projects } from '../data/profile';
 
 const Resume = () => {
   const resumeRef = useRef<HTMLDivElement>(null);
@@ -72,164 +73,66 @@ const Resume = () => {
         <div className="border border-gray-200 rounded-lg overflow-x-auto bg-gray-100 p-4 md:p-8">
           <div ref={resumeRef} id="resume-document" className="resume-a4-sheet mx-auto">
             <div className="text-center mb-6">
-              <h2 className="resume-name">Mariam Eid</h2>
-              <p className="resume-subtitle">Software Engineering Student</p>
+              <h2 className="resume-name">{profile.cvName}</h2>
+              <p className="resume-subtitle">{profile.title}</p>
               <p className="resume-contact">
-                Abu Dhabi, UAE | meid@student.42abudhabi.ae | +971 52 145 0585
+                {profile.location} | {profile.email} | {profile.phone}
               </p>
             </div>
 
             <section className="resume-block">
               <h3 className="resume-section-title">Education</h3>
-              <div className="resume-entry">
-                <div className="resume-entry-header">
-                  <p className="resume-role">42 Abu Dhabi</p>
-                  <p className="resume-date">2023 - Present</p>
+              {education.map((item) => (
+                <div key={item.institution} className="resume-entry">
+                  <div className="resume-entry-header">
+                    <p className="resume-role">{item.cv.title}</p>
+                    <p className="resume-date">{item.cv.period}</p>
+                  </div>
+                  <p className="resume-org">{item.cv.detail}</p>
                 </div>
-                <p className="resume-org">Software Engineering Program</p>
-              </div>
-              <div className="resume-entry">
-                <div className="resume-entry-header">
-                  <p className="resume-role">High School Graduate</p>
-                  <p className="resume-date">2022 - 2023</p>
-                </div>
-                <p className="resume-org">High school diploma</p>
-              </div>
+              ))}
             </section>
 
             <section className="resume-block">
               <h3 className="resume-section-title">Experience</h3>
-
-              <div className="resume-entry">
-                <div className="resume-entry-header">
-                  <p className="resume-role">Intern</p>
-                  <p className="resume-date">2 months</p>
+              {experiences.map((exp) => (
+                <div key={`${exp.position}-${exp.company}`} className="resume-entry">
+                  <div className="resume-entry-header">
+                    <p className="resume-role">{exp.cv.role}</p>
+                    <p className="resume-date">{exp.cv.period}</p>
+                  </div>
+                  <p className="resume-org">{exp.cv.org}</p>
+                  <ul className="resume-bullets">
+                    {exp.cv.bullets.map((bullet) => (
+                      <li key={bullet}>{bullet}</li>
+                    ))}
+                  </ul>
                 </div>
-                <p className="resume-org">Exelixi AI, Dubai</p>
-                <ul className="resume-bullets">
-                  <li>Developed a software system communicating with hardware components</li>
-                  <li>Independently handled a full project from development to delivery</li>
-                  <li>Delivered the project on time under real-world constraints</li>
-                </ul>
-              </div>
-
-              <div className="resume-entry">
-                <div className="resume-entry-header">
-                  <p className="resume-role">Club Organizer</p>
-                  <p className="resume-date">2026 - Present</p>
-                </div>
-                <p className="resume-org">AI & ML Club, 42 Abu Dhabi</p>
-                <ul className="resume-bullets">
-                  <li>Helped design and set up club events on AI and ML topics</li>
-                  <li>Worked to keep members active and involved in peer learning</li>
-                  <li>Started contributing to the club website</li>
-                </ul>
-              </div>
-
-              <div className="resume-entry">
-                <div className="resume-entry-header">
-                  <p className="resume-role">Co-founder & CEO</p>
-                  <p className="resume-date">May 2025 - Present</p>
-                </div>
-                <p className="resume-org">RMC Labs</p>
-                <ul className="resume-bullets">
-                  <li>Co-founded a robotics startup building tailor-made robots for campuses and events</li>
-                  <li>Lead product roadmap and oversee Roamio, an autonomous campus guide robot</li>
-                  <li>Built the first MVP and represented 42 at North Star Dubai 2025</li>
-                  <li>Participated in the Dubai Startup Competition 2025</li>
-                </ul>
-              </div>
-
-              <div className="resume-entry">
-                <div className="resume-entry-header">
-                  <p className="resume-role">Intern</p>
-                  <p className="resume-date">May 2025 - August 2025</p>
-                </div>
-                <p className="resume-org">RWT startup</p>
-                <ul className="resume-bullets">
-                  <li>Developed features for the existing company website</li>
-                  <li>Built a summarizer website from scratch for text and files</li>
-                  <li>Helped with website testing</li>
-                </ul>
-              </div>
-
-              <div className="resume-entry">
-                <div className="resume-entry-header">
-                  <p className="resume-role">Discovery Piscine</p>
-                  <p className="resume-date">Jun 2024 - Aug 2024</p>
-                </div>
-                <p className="resume-org">42 Abu Dhabi</p>
-                <ul className="resume-bullets">
-                  <li>Enhanced Python skills through the Two Discovery Program</li>
-                  <li>Developed teaching and mentoring skills with younger learners</li>
-                </ul>
-              </div>
-
-              <div className="resume-entry">
-                <div className="resume-entry-header">
-                  <p className="resume-role">Mentor School Hackathon</p>
-                  <p className="resume-date">May 2025</p>
-                </div>
-                <p className="resume-org">PISA Charter School</p>
-                <ul className="resume-bullets">
-                  <li>Mentored a team of four participants using AI tools</li>
-                  <li>Led the team to victory with focused planning and time management</li>
-                </ul>
-              </div>
+              ))}
             </section>
 
             <section className="resume-block">
               <h3 className="resume-section-title">Skills</h3>
               <div className="resume-skills-grid">
-                <div>
-                  <p className="resume-skill-label">Programming:</p>
-                  <p className="resume-skill-value">C, C++, Python</p>
-                </div>
-                <div>
-                  <p className="resume-skill-label">Robotics:</p>
-                  <p className="resume-skill-value">ROS2, Electronics, 3D Printing, Hardware</p>
-                </div>
-                <div>
-                  <p className="resume-skill-label">DevOps & Tools:</p>
-                  <p className="resume-skill-value">Git, Docker, Linux</p>
-                </div>
-                <div>
-                  <p className="resume-skill-label">Web:</p>
-                  <p className="resume-skill-value">Django, TypeScript</p>
-                </div>
-                <div>
-                  <p className="resume-skill-label">AI:</p>
-                  <p className="resume-skill-value">AI tools, agentic AI</p>
-                </div>
-                <div>
-                  <p className="resume-skill-label">Computer Science:</p>
-                  <p className="resume-skill-value">Data Structures, Algorithms, OS, Networking</p>
-                </div>
+                {skillCategories.map((category) => (
+                  <div key={category.title}>
+                    <p className="resume-skill-label">{category.cvLabel}:</p>
+                    <p className="resume-skill-value">
+                      {category.skills.map((skill) => skill.cvName ?? skill.name).join(', ')}
+                    </p>
+                  </div>
+                ))}
               </div>
             </section>
 
             <section className="resume-block">
               <h3 className="resume-section-title">Projects</h3>
               <ul className="resume-bullets">
-                <li>
-                  <strong>KiddoPath (ft_transcendence):</strong> Kids' productivity platform with
-                  microservices (in progress)
-                </li>
-                <li>
-                  <strong>ft_irc:</strong> IRC server in C++ with a modular SOLID-inspired architecture
-                </li>
-                <li>
-                  <strong>Inception:</strong> Multi-container Docker stack (NGINX, WordPress, MariaDB)
-                </li>
-                <li>
-                  <strong>Roamio:</strong> Campus guide robot powered by AI, with RMC Labs
-                </li>
-                <li>
-                  <strong>para_legal_news:</strong> Legal AI agent website
-                </li>
-                <li>
-                  <strong>minishell:</strong> Simplified shell implementation in C
-                </li>
+                {projects.map((project) => (
+                  <li key={project.title}>
+                    <strong>{project.cv.name}:</strong> {project.cv.summary}
+                  </li>
+                ))}
               </ul>
             </section>
           </div>

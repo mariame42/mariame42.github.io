@@ -1,84 +1,29 @@
 import React from 'react';
 import { Code, Server, Database, Globe, Cpu, Layers } from 'lucide-react';
 import SectionTitle from './SectionTitle';
+import { skillCategories } from '../data/profile';
+
+const icons = {
+  code: <Code className="text-blue-600" size={24} />,
+  globe: <Globe className="text-blue-600" size={24} />,
+  server: <Server className="text-blue-600" size={24} />,
+  database: <Database className="text-blue-600" size={24} />,
+  cpu: <Cpu className="text-blue-600" size={24} />,
+  layers: <Layers className="text-blue-600" size={24} />,
+};
 
 const Skills = () => {
-  const skillCategories = [
-    {
-      title: 'Programming Languages',
-      icon: <Code className="text-blue-600" size={24} />,
-      skills: [
-        { name: 'C', level: 80 },
-        { name: 'Python', level: 60 },
-        { name: 'C++', level: 40 },
-      ]
-    },
-    {
-      title: 'Robotics',
-      icon: <Globe className="text-blue-600" size={24} />,
-      skills: [
-        { name: 'ROS2', level: 80 },
-        { name: 'Electronics', level: 50},
-        { name: '3D Printing', level: 80},
-        { name: 'Hardware', level: 70},
-      ]
-    },
-    {
-      title: 'DevOps & Tools',
-      icon: <Server className="text-blue-600" size={24} />,
-      skills: [
-        { name: 'Git', level: 85 },
-        { name: 'Docker', level: 75 },
-        { name: 'Linux', level: 80 },
-      ]
-    },
-    {
-      title: 'Ai',
-      icon: <Database className="text-blue-600" size={24} />,
-      skills: [
-        { name: 'Ai tools', level: 80 },
-        { name: 'API Usage', level: 70 },
-        { name: 'Agentic ai', level: 30 },
-      ]
-    },
-    {
-      title: 'Web Development',
-      icon: <Cpu className="text-blue-600" size={24} />,
-      skills: [
-        { name: 'Backend with Django', level: 60 },
-        { name: 'Frontend with typescript', level: 20 },
-      ]
-    },
-    {
-      title: 'Soft Skills',
-      icon: <Layers className="text-blue-600" size={24} />,
-      skills: [
-        { name: 'Time Management', level: 90 },
-        { name: 'Problem Solving', level: 90 },
-        { name: 'Team Collaboration', level: 85 },
-        { name: 'Communication', level: 80 },
-        { name: 'Adaptability', level: 85 },
-      ]
-    },
-    {
-      title: 'game Development',
-      icon: <Globe className="text-blue-600" size={24} />,
-      skills: [
-        { name: 'Unity', level: 20 },
-        { name: 'Blender', level: 50 },
-      ]
-    }
-  ];
+  const pageCategories = skillCategories.filter((category) => category.showOnPage);
 
   return (
     <div className="space-y-8">
       <SectionTitle icon={<Code />} title="Skills" />
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {skillCategories.map((category, index) => (
+        {pageCategories.map((category, index) => (
           <div key={index} className="bg-white rounded-lg shadow-md p-6">
             <div className="flex items-center mb-4">
-              {category.icon}
+              {icons[category.icon]}
               <h3 className="text-xl font-semibold text-gray-800 ml-2">{category.title}</h3>
             </div>
             
